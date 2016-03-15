@@ -35,10 +35,10 @@
           </div>
           <div class="span1">
             <% if ff.object.persisted? %>
-              <%= link_to 'Delete', nil, class: "btn btn-danger delete-association" %>
+              <%= link_to 'Delete', nil, class: "btn btn-danger delete-association", onclick: "return deleteRow(#{i})" %>
               <%= ff.check_box :_destroy, class: "destroy", hidden: true %>
             <% else %>
-              <%= link_to 'Delete', nil, class: "btn btn-danger flush-association" %>
+              <%= link_to 'Delete', nil, class: "btn btn-danger flush-association", onclick: "return deleteRow(#{i})" %>
             <% end %>
           </div>
         </div>

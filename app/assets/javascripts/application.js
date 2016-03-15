@@ -30,11 +30,16 @@ function displayRow(boolean) {
   } else {
     document.getElementsByClassName("associations")[0].lastElementChild.style.display = "none";
   }
-
   return false;
 }
 
 // When a Delete button is clicked, hide the row to which it belongs, but mark the hidden _destroy field in that row as truthy.
+function deleteRow(number) {
+  document.getElementsByClassName("association container")[number].style.display = "none";
+  document.getElementsByName("course[grade_thresholds_attributes][" + number + "][_destroy]")[0].value = 1
+
+  return false;
+}
 
 
 // Back on the course detail page, you'll notice that clicking on the various nav buttons in the blue box will cause the page to snap to that section.
