@@ -19,13 +19,18 @@
 // When the user clicks on the save button, disable the button so that it cannot be accidentally double-clicked.
 function debounce() {
   document.getElementsByClassName("actions")[0].firstElementChild.disabled = true;
+  document.getElementById("edit_course_1").submit();
 }
 
 // Hide the last empty row of the grading scale section when the page loads.
-
-
 // When the "Add Grade Threshold" button is clicked, show the last row. You do not need to make it show an additional row if the user clicks again.
-
+function displayRow(boolean) {
+  if (boolean) {
+    document.getElementsByClassName("associations")[0].lastElementChild.style.display = "block"
+  } else {
+    document.getElementsByClassName("associations")[0].lastElementChild.style.display = "none"
+  }
+}
 
 // When a Delete button is clicked, hide the row to which it belongs, but mark the hidden _destroy field in that row as truthy.
 
