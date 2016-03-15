@@ -26,10 +26,12 @@ function debounce() {
 // When the "Add Grade Threshold" button is clicked, show the last row. You do not need to make it show an additional row if the user clicks again.
 function displayRow(boolean) {
   if (boolean) {
-    document.getElementsByClassName("associations")[0].lastElementChild.style.display = "block"
+    document.getElementsByClassName("associations")[0].lastElementChild.style.display = "block";
   } else {
-    document.getElementsByClassName("associations")[0].lastElementChild.style.display = "none"
+    document.getElementsByClassName("associations")[0].lastElementChild.style.display = "none";
   }
+
+  return false;
 }
 
 // When a Delete button is clicked, hide the row to which it belongs, but mark the hidden _destroy field in that row as truthy.
