@@ -75,7 +75,7 @@ $(bindDeleteButton);
 
 
 function launchModal() {
-  $("#dateModal").modal('show');
+  $(event.target).parent().siblings(".modal").modal('show');
 }
 
 function bindUpdateDateButton() {
