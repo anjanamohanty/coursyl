@@ -18,9 +18,15 @@
 
 // When the user clicks on the save button, disable the button so that it cannot be accidentally double-clicked.
 function debounce() {
-  document.getElementsByClassName("actions")[0].firstElementChild.disabled = true;
-  document.getElementById("edit_course_1").submit();
+  $(event.target).prop("disabled", true);
+  $(event.target).closest("form").submit();
 }
+
+function bindSubmitButton() {
+  $("input[type=submit]").on("click", debounce);
+}
+
+$(bindSubmitButton);
 
 // Hide the last empty row of the grading scale section when the page loads.
 // When the "Add Grade Threshold" button is clicked, show the last row. You do not need to make it show an additional row if the user clicks again.
