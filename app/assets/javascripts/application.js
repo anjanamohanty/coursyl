@@ -40,11 +40,14 @@ function displayRow(boolean) {
   return false;
 }
 
-// function bindAddGradeButton() {
-//   $(".new-association").on("click", displayRow(true));
-// }
-//
-// $(bindAddGradeButton);
+
+function bindAddGradeButton() {
+  $(".new-association").on("click", function() {
+    displayRow(true);
+  });
+}
+
+$(bindAddGradeButton);
 
 function hideRow() {
   displayRow(false);
@@ -69,3 +72,14 @@ $(bindDeleteButton);
 // Back on the course detail page, you'll notice that clicking on the various nav buttons in the blue box will cause the page to snap to that section.
 // Implement smooth scrolling instead. You'll have to look it up on Google, and I expect that you'll copy and paste a solution into your code.
 // It's okay if you don't understand it all; welcome to the vast world of JavaScript.
+
+
+function launchModal() {
+  $("#dateModal").modal('show');
+}
+
+function bindUpdateDateButton() {
+  $(".change-date").on("click", launchModal);
+}
+
+$(bindUpdateDateButton);
