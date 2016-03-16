@@ -28,7 +28,7 @@
               <li><%= link_to "Description", '#anchor-description' %></li>
               <li class="divider-vertical"></li>
               <% if current_user && current_user.teaching?(@course) %>
-                <li><%= link_to "Students", '#anchor-students' %></li>
+                <li><a data-scroll href='#anchor-students'>Students</a></li>
                 <li class="divider-vertical"></li>
               <% end %>
               <% if @course.achievement_grading? %>
