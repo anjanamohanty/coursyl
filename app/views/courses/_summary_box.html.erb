@@ -32,14 +32,14 @@
                 <li class="divider-vertical"></li>
               <% end %>
               <% if @course.achievement_grading? %>
-                <li><%= link_to "Achievements", '#anchor-achievements' %></li>
+                <li><a data-scroll href='#anchor-achievements'>Achievements</a></li>
               <% else %>
-                <li><%= link_to "Assignments", '#anchor-assignments' %></li>
+                <li><a data-scroll href='#anchor-assignments'>Assignments</a></li>
               <% end %>
               <li class="divider-vertical"></li>
-              <li><%= link_to "Lessons", '#anchor-lessons' %></li>
+              <li><a data-scroll href='#anchor-lessons'>Lessons</a></li>
               <li class="divider-vertical"></li>
-              <li><%= link_to "Policies", '#anchor-policies' %></li>
+              <li><a data-scroll href='#anchor-policies'>Policies</a></li>
             </ul>
           </div>
         </nav>
