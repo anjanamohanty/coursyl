@@ -22,13 +22,13 @@
 <% end %>
 
 
-<div class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="dateModalLabel" aria-hidden="true">
-  <div class="modal-header">
+<div class="modal hide fade text-center" tabindex="-1" role="dialog" aria-labelledby="dateModalLabel" aria-hidden="true">
+  <div class="modal-header center">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
     <h3 id="myModalLabel">Update Assignment date</h3>
   </div>
-  <%= form_for assignment do |f| %>
     <div class="modal-body">
+      <%= form_for assignment do |f| %>
       <p><%= assignment.name %></p>
       <p>
         <%= f.label :active_at %>
@@ -38,11 +38,8 @@
         <%= f.label :due_at %>
         <%= f.date_field :due_at %>
       </p>
-    </div>
-    <div class="modal-footer">
       <%= f.submit "Save dates", class: "btn btn-primary" %>
       <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-    </div>
-
-  <% end %>
+    <% end %>
+  </div>
 </div>
